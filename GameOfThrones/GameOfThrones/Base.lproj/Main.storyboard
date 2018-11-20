@@ -21,7 +21,7 @@
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="leadingShowCell" rowHeight="147" id="QMa-Gk-DPu" customClass="EpisodeCell" customModule="GameOfThrones" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="147"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QMa-Gk-DPu" id="hi9-Bl-Uny">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QMa-Gk-DPu" id="hi9-Bl-Uny" customClass="EpisodeCell" customModule="GameOfThrones" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="146.66666666666666"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -46,9 +46,9 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="leadingEpisodeName" destination="z4N-y8-Yg3" id="smE-hx-bZj"/>
-                                    <outlet property="leadingEpisodeNumber" destination="xa4-Sc-ni4" id="ozw-ke-phy"/>
-                                    <outlet property="leadingImage" destination="nzA-kY-GVd" id="RCM-hF-nAs"/>
+                                    <outlet property="leadingEpisodeName" destination="z4N-y8-Yg3" id="KSF-cg-bux"/>
+                                    <outlet property="leadingEpisodeNumber" destination="xa4-Sc-ni4" id="GZz-OF-lIh"/>
+                                    <outlet property="leadingImage" destination="nzA-kY-GVd" id="PVz-I6-XL0"/>
                                     <segue destination="6uc-IA-zRt" kind="show" id="ghj-Ie-k4g"/>
                                 </connections>
                             </tableViewCell>
@@ -80,9 +80,9 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="trailingEpisodeName" destination="rfJ-c8-qRZ" id="g2z-mF-teU"/>
-                                    <outlet property="trailingEpisodeNumber" destination="CLf-ws-u52" id="xzp-Im-avO"/>
-                                    <outlet property="trailingImage" destination="NOX-h8-NBj" id="CxH-mB-qA4"/>
+                                    <outlet property="trailingEpisodeName" destination="rfJ-c8-qRZ" id="VUC-Qu-Isf"/>
+                                    <outlet property="trailingEpisodeNumber" destination="CLf-ws-u52" id="1JS-rt-v8u"/>
+                                    <outlet property="trailingImage" destination="NOX-h8-NBj" id="6Yl-wJ-t17"/>
                                     <segue destination="6uc-IA-zRt" kind="show" id="nxe-Bi-2Jl"/>
                                 </connections>
                             </tableViewCell>

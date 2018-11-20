@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0DB4768221A4B66C004C7ED1 /* EpisodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB4768121A4B66C004C7ED1 /* EpisodeCell.swift */; };
+		0DB4768421A4C2A3004C7ED1 /* LeadingShowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB4768321A4C2A3004C7ED1 /* LeadingShowCell.swift */; };
+		0DB4768621A4C2B2004C7ED1 /* TrailingShowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB4768521A4C2B2004C7ED1 /* TrailingShowCell.swift */; };
+		0DB4768821A4C47E004C7ED1 /* EpisodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB4768721A4C47E004C7ED1 /* EpisodeCell.swift */; };
 		0DDC013E21A31F540093E9C0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDC013D21A31F540093E9C0 /* DetailViewController.swift */; };
 		57D0D22A219F70EA00B5753A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D0D229219F70EA00B5753A /* AppDelegate.swift */; };
 		57D0D22C219F70EA00B5753A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D0D22B219F70EA00B5753A /* ViewController.swift */; };
@@ -18,7 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0DB4768121A4B66C004C7ED1 /* EpisodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeCell.swift; sourceTree = "<group>"; };
+		0DB4768321A4C2A3004C7ED1 /* LeadingShowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadingShowCell.swift; sourceTree = "<group>"; };
+		0DB4768521A4C2B2004C7ED1 /* TrailingShowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailingShowCell.swift; sourceTree = "<group>"; };
+		0DB4768721A4C47E004C7ED1 /* EpisodeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EpisodeCell.swift; path = ../../../../.Trash/EpisodeCell.swift; sourceTree = "<group>"; };
 		0DDC013D21A31F540093E9C0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		57D0D226219F70EA00B5753A /* GameOfThrones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameOfThrones.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57D0D229219F70EA00B5753A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,7 +67,9 @@
 				57D0D229219F70EA00B5753A /* AppDelegate.swift */,
 				57D0D22B219F70EA00B5753A /* ViewController.swift */,
 				57D0D22D219F70EA00B5753A /* Main.storyboard */,
-				0DB4768121A4B66C004C7ED1 /* EpisodeCell.swift */,
+				0DB4768721A4C47E004C7ED1 /* EpisodeCell.swift */,
+				0DB4768321A4C2A3004C7ED1 /* LeadingShowCell.swift */,
+				0DB4768521A4C2B2004C7ED1 /* TrailingShowCell.swift */,
 				0DDC013D21A31F540093E9C0 /* DetailViewController.swift */,
 				57D0D23B219F719C00B5753A /* GOTEpisdoe.swift */,
 				57D0D230219F70EA00B5753A /* Assets.xcassets */,
@@ -145,9 +151,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				57D0D23C219F719C00B5753A /* GOTEpisdoe.swift in Sources */,
+				0DB4768421A4C2A3004C7ED1 /* LeadingShowCell.swift in Sources */,
+				0DB4768621A4C2B2004C7ED1 /* TrailingShowCell.swift in Sources */,
 				57D0D22C219F70EA00B5753A /* ViewController.swift in Sources */,
+				0DB4768821A4C47E004C7ED1 /* EpisodeCell.swift in Sources */,
 				57D0D22A219F70EA00B5753A /* AppDelegate.swift in Sources */,
-				0DB4768221A4B66C004C7ED1 /* EpisodeCell.swift in Sources */,
 				0DDC013E21A31F540093E9C0 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
