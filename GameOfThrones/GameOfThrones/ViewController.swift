@@ -10,7 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
-
+var episodes = GOTEpisode.allEpisodes
+    
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
