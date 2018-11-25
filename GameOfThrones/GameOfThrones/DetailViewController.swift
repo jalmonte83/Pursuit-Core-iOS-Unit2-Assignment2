@@ -10,23 +10,38 @@ import UIKit
 
 class DetailViewController: UITableViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+   
 
-    }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
-
+        var got: GOTEpisode!
+        
+        @IBOutlet weak var episodeImage: UIImageView!
+        @IBOutlet weak var episodeTitle: UILabel!
+        
+        @IBOutlet weak var episodeSeason: UILabel!
+        
+        @IBOutlet weak var episodeNumber: UILabel!
+        
+        @IBOutlet weak var episodeRuntime: UILabel!
+        
+        @IBOutlet weak var episodeAirdate: UILabel!
+        
+        @IBOutlet weak var episodeDescription: UITextView!
+        
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            episodeImage.image = UIImage(named: got.mediumImageID)
+            episodeTitle.text = got.name
+            episodeSeason.text = "Season \(got.season)"
+            episodeNumber.text = "Episode \(got.number)"
+            episodeRuntime.text = "Runtime \(got.runtime)"
+            episodeAirdate.text = "Airdate \(got.airdate)"
+            episodeDescription.text = "\(got.summary)"
+            
+        }
+        
+    
+        
+    
   
 
 }
