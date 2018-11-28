@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     
 
-var episodes = GOTEpisode.allEpisodes
+private var episodeSections = [[GOTEpisode]]()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -20,14 +20,15 @@ var episodes = GOTEpisode.allEpisodes
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        
+        episodeSections = Array(repeating: [GOTEpisode](), count: GOTEpisode.allEpisodes.last!.season)
+        GOTEpisode.allEpisodes.forEach { episodeSections[$0.season - 1].append($0)}
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let destination = segue.destination as? DetailViewController,
-            let cellSelected = tableView.indexPathForSelectedRow else {return}
-        let episodeSelected = episodes
-        destination.episodes = episodeSelected
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        guard let destination = segue.destination as? DetailViewController,
+//            let cellSelected = tableView.indexPathForSelectedRow else {return}
+//        let episodeSelected = episodes
+//        destination.episodes = episodeSelected
+//    }
     
 
 }
@@ -38,14 +39,18 @@ extension ViewController: UITableViewDelegate {
 }
 extension ViewController: UITableViewDataSource{
     func numberOfSections(in tableView: UITableView) -> Int {
-        return episodes.count
+        return episodeSections.count
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return episodeSections[section].count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableView.dequeueReusableCell(withIdentifier: <#T##String#>, for: <#T##IndexPath#>)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell { guard let cell = tableView.dequeueReusableCell(withIdentifier: "leadingShowCell", for: indexPath) as? EpisodeCell else { fatalError("fatal error") }
+        let episode = episodeSections[indexPath.section][indexPath.row]
+        cell.leadingEpisodeName.text = String(episode.name)
+        cell.leadingEpisodeNumber.text = String(episode.season)
+        cell.leadingImage.image = UIImage(named: episode.mediumImageID)
+        return cell
     }
     
     
