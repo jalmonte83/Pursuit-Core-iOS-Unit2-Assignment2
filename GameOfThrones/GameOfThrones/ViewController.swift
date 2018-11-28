@@ -48,7 +48,7 @@ extension ViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell { guard let cell = tableView.dequeueReusableCell(withIdentifier: "leadingShowCell", for: indexPath) as? EpisodeCell else { fatalError("fatal error") }
         let episode = episodeSections[indexPath.section][indexPath.row]
         cell.leadingEpisodeName.text = String(episode.name)
-        cell.leadingEpisodeNumber.text = String(episode.season)
+        cell.leadingEpisodeNumber.text = "S:\(episode.season)  E: \(episode.number)"
         cell.leadingImage.image = UIImage(named: episode.mediumImageID)
         return cell
     }
