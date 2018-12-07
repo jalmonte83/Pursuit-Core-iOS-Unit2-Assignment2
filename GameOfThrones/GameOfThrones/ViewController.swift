@@ -23,12 +23,12 @@ private var episodeSections = [[GOTEpisode]]()
         episodeSections = Array(repeating: [GOTEpisode](), count: GOTEpisode.allEpisodes.last!.season)
         GOTEpisode.allEpisodes.forEach { episodeSections[$0.season - 1].append($0)}
     }
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let destination = segue.destination as? DetailViewController,
-//            let cellSelected = tableView.indexPathForSelectedRow else {return}
-//        let episodeSelected = episodes
-//        destination.episodes = episodeSelected
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destination = segue.destination as? DetailViewController,
+            let cellSelected = tableView.indexPathForSelectedRow else {return}
+        let episodeSelected = episodeSections[cellSelected.section][cellSelected.row]
+        destination.got = episodeSelected
+    }
     
 
 }
